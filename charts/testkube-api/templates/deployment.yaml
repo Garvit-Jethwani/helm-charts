@@ -48,7 +48,7 @@ spec:
           - name: SLACK_TOKEN
             value: "{{ .Values.slackToken }}"
           - name: "STORAGE_ENDPOINT"
-            value:  "testkube-minio-service-{{ .Release.Namespace }}:{{ .Values.storage.endpoint_port }}"
+            value:  "{{ .Values.storage.endpoint }}"
           - name: "STORAGE_ACCESSKEYID"
             value:  "{{ .Values.storage.accessKeyId }}"
           - name: "STORAGE_SECRETACCESSKEY"
