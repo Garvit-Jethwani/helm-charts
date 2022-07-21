@@ -115,7 +115,7 @@ testkube-api:
     type: ClusterIP # for working with real k8s we should use "ClusterIP" type.
     port: 8088
   minio:
-    enabled: true
+    enabled: false
     nodeSelector: {}
     tolerations: []
     affinity: {}
@@ -166,6 +166,7 @@ testkube-api:
           - demo.testkube.io
         secretName: testkube-demo-cert-secret
   storage:
+    endpoint : ""
     endpoint_port: "9000"
     accessKeyId: "minio"
     accessKey: "minio123"
